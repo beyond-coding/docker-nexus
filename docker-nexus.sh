@@ -10,10 +10,10 @@ mkdir -p $CADDY
 echo "nexus.beyond-coding.com" >> $CADDY/Caddyfile
 echo "tls guillermo.herrero@beyond-coding.com" >> $CADDY/Caddyfile
 
-mkdir nexus
+mkdir nexus && chown -R 200 nexus
 
 echo "$HEADER starting..."
 
 wget https://raw.githubusercontent.com/beyond-coding/docker-nexus/master/docker-compose.yml
 
-echo "$HEADER run 'docker-compose up -d'"
+docker-compose up -d
