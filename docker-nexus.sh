@@ -8,7 +8,8 @@ CADDY=$HOME/caddy
 mkdir -p $CADDY
 
 wget https://raw.githubusercontent.com/beyond-coding/docker-nexus/master/Caddyfile
-mv Caddyfile $CADDY/.
+cp Caddyfile $CADDY/.
+rm Caddyfile
 
 # echo "nexus.beyond-coding.com" >> $CADDY/Caddyfile
 # echo "tls guillermo.herrero@beyond-coding.com" >> $CADDY/Caddyfile
