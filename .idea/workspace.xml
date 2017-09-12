@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f37808e0-8abb-41c2-80ad-c4565b2b134d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docker-nexus.sh" afterPath="$PROJECT_DIR$/docker-nexus.sh" />
-    </list>
+    <list default="true" id="f37808e0-8abb-41c2-80ad-c4565b2b134d" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -217,12 +215,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1505202799255</updated>
-      <workItem from="1505202800550" duration="7816000" />
+      <workItem from="1505202800550" duration="7880000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7816000" />
+    <option name="totallyTimeSpent" value="7880000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-4" width="1920" height="1084" extended-state="6" />
