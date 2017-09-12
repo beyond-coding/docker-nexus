@@ -1,7 +1,6 @@
 --- Run the applications ---
 
-wget https://raw.githubusercontent.com/beyond-coding/docker-nexus/master/docker-nexus.sh
-sh docker-nexus.sh
+wget https://raw.githubusercontent.com/beyond-coding/docker-nexus/master/docker-nexus.sh && sh docker-nexus.sh
 
 ---- terminal docker commands
 
