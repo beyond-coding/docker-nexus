@@ -16,4 +16,4 @@ echo "$HEADER starting..."
 
 wget https://raw.githubusercontent.com/beyond-coding/docker-nexus/master/docker-compose.yml
 
-docker-compose up -d
+echo "$HEADER run 'docker-compose up -d'"
