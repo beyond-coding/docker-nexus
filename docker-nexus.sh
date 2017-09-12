@@ -11,10 +11,15 @@ wget https://raw.githubusercontent.com/beyond-coding/docker-nexus/master/Caddyfi
 cp Caddyfile $CADDY/.
 rm Caddyfile
 
+mkdir $CADDY/srv
+wget https://raw.githubusercontent.com/beyond-coding/docker-nexus/master/index.html
+cp index.html $CADDY/srv/.
+rm index.html
+
 # echo "nexus.beyond-coding.com" >> $CADDY/Caddyfile
 # echo "tls guillermo.herrero@beyond-coding.com" >> $CADDY/Caddyfile
 
-mkdir nexus && chown -R 200 nexus
+mkdir nexus
 
 echo "$HEADER starting..."
 
