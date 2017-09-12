@@ -1,5 +1,7 @@
 nexus.beyond-coding.com {
-    proxy / 172.17.0.3:8081 172.17.0.3:5000 172.17.0.3:5001
+    proxy / 172.17.0.3:8081
+    proxy / 172.17.0.3:5000
+    proxy / 172.17.0.3:5001
 }
 
 tsl guillermo.herrero@beyond-coding.com
