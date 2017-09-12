@@ -11,8 +11,9 @@ services:
     - 443:443
     volumes:
     - $HOME/caddy/Caddyfile:/etc/Caddyfile
-    - $HOME/caddy/files:/root/.caddy # Your certificates will be stored here
+    - $HOME/caddy/certificates:/root/.caddy # Your certificates will be stored here
     - $HOME/caddy/logs:/var/log/caddy:Z # Caddy logs will be stored here
+    - $HOME/caddy/srv:/srv # The hello world page
 
   nexus:
     restart: always
