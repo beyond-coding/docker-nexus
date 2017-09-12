@@ -1,0 +1,25 @@
+version: '2'
+
+services:
+  caddy:
+    restart: always
+    image: abiosoft/caddy
+    depends_on:
+    - nexus # Ensures that caddy will relink if the other container is restarted
+    ports:
+    - 80:80
+    - 443:443
+    volumes:
+    - $HOME/caddy/Caddyfile:/etc/Caddyfile
+    - $HOME/caddy/files:/root/.caddy # Your certificates will be stored here
+    - $HOME/caddy/logs:/var/log/caddy:Z # Caddy logs will be stored here
+
+  nexus:
+    restart: always
+    image: sonatype/nexus3
+    ports:
+    - 8081:8081
+    - 5000:5000
+    - 5001:5001
+    volumes:
+    - $HOME/nexus:/nexus-data

@@ -1,0 +1,11 @@
+wget https://raw.githubusercontent.com/beyond-coding/docker-nexus/master/docker-compose.yml
+
+----
+
+docker run -d \
+    -v $CADDY/Caddyfile:/etc/Caddyfile \
+    -v $CADDY/caddyfiles:/root/.caddy \
+    -p 80:80 -p 443:443 \
+    --restart=unless-stopped \
+    --name caddy \
+    abiosoft/caddy
