@@ -1,6 +1,9 @@
-wget https://raw.githubusercontent.com/beyond-coding/docker-nexus/master/docker-compose.yml
+--- Run the applications ---
 
-----
+wget https://raw.githubusercontent.com/beyond-coding/docker-nexus/master/docker-nexus.sh
+sh docker-nexus.sh
+
+---- terminal docker commands
 
 docker run -d \
     -v $CADDY/Caddyfile:/etc/Caddyfile \
