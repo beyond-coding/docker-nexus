@@ -18,7 +18,7 @@ services:
     restart: always
     image: sonatype/nexus3
     volumes:
-    nexus-data:/nexus-data
+    - nexus-data:/nexus-data
 
 volumes:
   nexus-data:
