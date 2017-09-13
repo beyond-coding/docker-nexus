@@ -5,12 +5,19 @@
         fail_timeout 0s
         transparent
     }
+
+    log stdout
+    errors stdout
 }
 
 {{REGISTRY_HOST}} {
 
     proxy / http://{{NEXUS_IP}}:{{REGISTRY_PORT}} {
         fail_timeout 0s
+        websocket
         transparent
     }
+
+    log stdout
+    errors stdout
 }
