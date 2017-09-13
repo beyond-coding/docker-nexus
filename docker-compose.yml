@@ -9,26 +9,14 @@ services:
     ports:
     - 80:80
     - 443:443
-    environment:
-    - CADDY_EMAIL=guillermo.herrero@beyond-coding.com
-    - NEXUS_IP=nexus
-    - NEXUS_HOST=nexus.beyond-coding.com
-    - NEXUS_PORT=8081
-    - REGISTRY_HOST=registry.beyond-coding.com
-    - REGISTRY_PORT=5000
     volumes:
     - ./caddy/Caddyfile:/etc/Caddyfile
     - ./caddy/certificates:/root/.caddy # Your certificates will be stored here
     - ./caddy/logs:/var/log/caddy:Z # Caddy logs will be stored here
-#    - ./caddy/srv:/srv # The hello world page
 
   nexus:
     restart: always
     image: sonatype/nexus3
-#    ports:
-#    - 8081:8081
-#    - 5000:5000
-#    - 5001:5001
     volumes:
     - ./nexus/sonatype-work:/sonatype-work
     - ./nexus/nexus-data:/nexus-data

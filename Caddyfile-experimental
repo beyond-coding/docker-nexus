@@ -1,7 +1,7 @@
-nexus.beyond-coding.com {
-    tls guillermo.herrero@beyond-coding.com
+{$NEXUS_HOST} {
+    tls {$CADDY_EMAIL}
 
-    proxy / http://172.17.0.2:8081 {
+    proxy / http://{$NEXUS_IP}:{$NEXUS_PORT} {
         fail_timeout 0s
         transparent
     }
@@ -10,9 +10,9 @@ nexus.beyond-coding.com {
     errors stdout
 }
 
-registry.beyond-coding.com {
+{$REGISTRY_HOST} {
 
-    proxy / http://172.17.0.2:5000 {
+    proxy / http://{$NEXUS_IP}:{$REGISTRY_PORT} {
         fail_timeout 0s
         websocket
         transparent
