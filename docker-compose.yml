@@ -17,7 +17,6 @@ services:
   nexus:
     restart: always
     image: sonatype/nexus3
-    privileged: true
     volumes:
-    - ./nexus/sonatype-work:/sonatype-work
     - ./nexus/nexus-data:/nexus-data
+    - ./nexus/sonatype-work:/sonatype-work
