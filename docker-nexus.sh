@@ -13,9 +13,6 @@ wget https://raw.githubusercontent.com/beyond-coding/docker-nexus/master/Caddyfi
 cp Caddyfile $CADDY/.
 rm Caddyfile
 
-mkdir -p $DIR/nexus/nexus-data
-mkdir -p $DIR/nexus/sonatype-work
-
 echo "$HEADER starting..."
 
 wget https://raw.githubusercontent.com/beyond-coding/docker-nexus/master/docker-compose.yml
