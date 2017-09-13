@@ -1,7 +1,16 @@
-nexus.beyond-coding.com {
-    proxy / 172.17.0.3:8081
-    proxy / 172.17.0.3:5000
-    proxy / 172.17.0.3:5001
+{{NEXUS_HOST}} {
+    tls {{CADDY_EMAIL}}
+
+    proxy / http://{{NEXUS_IP}}:{{NEXUS_PORT}} {
+        fail_timeout 0s
+        transparent
+    }
 }
 
-tls guillermo.herrero@beyond-coding.com
+{{REGISTRY_HOST}} {
+
+    proxy / http://{{NEXUS_IP}}:{{REGISTRY_PORT}} {
+        fail_timeout 0s
+        transparent
+    }
+}

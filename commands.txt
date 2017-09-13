@@ -6,23 +6,20 @@ wget https://raw.githubusercontent.com/beyond-coding/docker-nexus/master/docker-
 
 docker run -d \
     -v ~/caddy/Caddyfile:/etc/Caddyfile \
-    -v ~/caddy/caddyfiles:/root/.caddy \
+    -v ~/caddy/certificates:/root/.caddy \
     -v ~/caddy/srv:/srv \
     -p 80:80 -p 443:443 \
     --restart=unless-stopped \
     --name caddy \
+    --link nexus:nexus \
     abiosoft/caddy
+
 
 docker run -d \
-    -v ~/caddy/Caddyfile:/etc/Caddyfile \
-    -v ~/caddy/caddyfiles:/root/.caddy \
-    -v ~/caddy/srv:/srv \
-    -p 80:80 -p 443:443 \
+    -v ~/nexus:/sonatype-work \
     --restart=unless-stopped \
-    --name caddy \
-    abiosoft/caddy
-
-
+    --name nexus \
+    sonatype/nexus3
 
 docker run -d \
     -v ~/nexus:/sonatype-work \
