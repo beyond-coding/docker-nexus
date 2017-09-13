@@ -1,7 +1,7 @@
 nexus.beyond-coding.com {
     tls guillermo.herrero@beyond-coding.com
 
-    proxy / http://172.17.0.2:8081 {
+    proxy / http://172.18.0.2:8081 {
         fail_timeout 0s
         transparent
     }
@@ -12,7 +12,7 @@ nexus.beyond-coding.com {
 
 registry.beyond-coding.com {
 
-    proxy / http://172.17.0.2:5000 {
+    proxy / http://172.18.0.2:5000 {
         fail_timeout 0s
         websocket
         transparent
