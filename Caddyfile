@@ -1,7 +1,7 @@
-{{NEXUS_HOST}} {
-    tls {{CADDY_EMAIL}}
+{$NEXUS_HOST} {
+    tls {$CADDY_EMAIL}
 
-    proxy / http://{{NEXUS_IP}}:{{NEXUS_PORT}} {
+    proxy / http://{$NEXUS_IP}:{$NEXUS_PORT} {
         fail_timeout 0s
         transparent
     }
@@ -10,9 +10,9 @@
     errors stdout
 }
 
-{{REGISTRY_HOST}} {
+{$REGISTRY_HOST} {
 
-    proxy / http://{{NEXUS_IP}}:{{REGISTRY_PORT}} {
+    proxy / http://{$NEXUS_IP}:{$REGISTRY_PORT} {
         fail_timeout 0s
         websocket
         transparent
