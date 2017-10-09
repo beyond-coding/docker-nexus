@@ -12,6 +12,8 @@ nexus.beyond-coding.com {
 
 registry.beyond-coding.com {
 
+    tls guillermo.herrero@beyond-coding.com
+
     proxy / http://172.18.0.2:5000 {
         fail_timeout 0s
         websocket
